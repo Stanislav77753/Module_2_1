@@ -1,0 +1,23 @@
+CREATE DATABASE module_2_1_db;
+
+CREATE TABLE developers(
+  developer_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  lname VARCHAR(50) NOT NULL,
+  name VARCHAR(50) NOT NULL);
+
+CREATE TABLE skills(
+  skill_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  skill_name VARCHAR(50) NOT NULL);
+
+CREATE TABLE projects(
+  project_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  project_name VARCHAR(50) NOT NULL);
+
+CREATE TABLE executor_companies(
+  company_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  company_name VARCHAR(50) NOT NULL);
+
+CREATE TABLE customers(
+  customer_id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  customer_name VARCHAR(50) NOT NULL);
+
