@@ -1,8 +1,8 @@
 SELECT Проект, MAX(Сумма) AS Стоимость FROM
   (SELECT  project_name AS Проект, SUM(salary) AS Сумма FROM
-    (SELECT projects.project_name, developers.salary FROM developer_projects
+    (SELECT projects.project_name, developers.salary FROM project_developers AS pd
       INNER JOIN projects
-        ON projects.project_id=developer_projects.project_id
+        ON projects.id=pd.project_id
       INNER JOIN developers
-        ON developers.developer_id=developer_projects.developer_id) AS res_sum
+        ON developers.id=pd.developer_id) AS res_sum
   GROUP BY project_name) AS max;
